@@ -8,21 +8,17 @@
 
 body{
     font-family: "montserrat";
+    background-color: rgb(125, 229, 238);
 }
 
 .nav-bar{
-    background: linear-gradient(
-        to right,
-        white,
-        purple,
-        white
-    );
+    background: rgb(214, 17, 214);
     height: 80px;
     width: 100%;
 }
 
 label.logo-name{
-    color: #000;
+    color: #fff;
     font-size: 25px;
     line-height: 80px;
     padding: 0 50px;
@@ -41,14 +37,87 @@ label.logo-name{
 }
 
 .nav-bar ul li a{
-    color: #000;
-    font-size: 17px;
+    color: #fff;
+    font-size: 18px;
     font-weight: bold;
     padding: 7px 13px;
     border-radius: 3px;
 }
 
 a:hover{
-    background: rgba(159, 158, 158, 0.553);
+    background: rgba(159, 158, 158, 0.708);
     transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo-name{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    .nav-bar ul li a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 858px){
+    label.logo-name{
+        font-size: 17px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(35, 136, 146);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .4s;
+    }
+    .nav-bar ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .nav-bar ul li a{
+        font-size: 19px;
+    }
+    .nav-bar ul li a:hover{
+        background: none;
+        color: purple;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+@media (max-width: 300px){
+    label.logo-name{
+        font-size: 12px;
+        padding-left: 15px;
+    }
+    .checkbtn{
+        font-size: 20px;
+    }
+    .nav-bar ul li{
+        font-size: 15px;
+        line-height: 20px;
+        margin: 40px 0;
+    }
 }

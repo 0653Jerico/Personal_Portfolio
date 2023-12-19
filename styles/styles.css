@@ -170,3 +170,24 @@ a:hover{
     margin: 15px;
     font-weight: 500;
 }
+
+@media (max-width: 952px){
+    .profile-container{
+        width: 70%;
+        height: 38vw;
+        padding: 5px;
+    }
+    .profile-pic{
+        width: 250px;
+        height: 250px;
+    }
+    .profile-text{
+        margin: 2rem;
+    }
+    .profile-text h2{
+        font-size: 20px;
+    }
+    .profile-text p{
+        font-size: 15px;
+    }
+}
